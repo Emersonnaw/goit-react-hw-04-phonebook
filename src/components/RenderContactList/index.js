@@ -1,0 +1,1 @@
+export { RenderContactList } from './RenderContactList';
