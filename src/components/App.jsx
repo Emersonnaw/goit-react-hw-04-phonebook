@@ -1,4 +1,4 @@
- import { useState } from "react";
+ import { useState,useEffect  } from "react";
 import { FormAddContacts } from "./FormAddContacts";
 import { FilterContacts } from './FilterContacts';
 import { RenderContactList } from './RenderContactList';
@@ -8,8 +8,24 @@ import { Div, Title, ContactsTitle } from './App.styled';
 import 'react-toastify/dist/ReactToastify.css';
 export const App = () => {
 
-  const [contacts, setContacts] = useState([]);
+  const [contacts, setContacts] = useState(JSON.parse(window.localStorage.getItem('contacts')) ?? []);
   const [filter, setFilter] = useState('');
+
+
+
+  useEffect(() => {
+  window.localStorage.setItem('contacts',JSON.stringify(contacts))
+},[contacts])
+
+
+
+
+
+
+
+
+
+
   // add contacts on contacts:[]
 const onFormData = (value) => {
 
