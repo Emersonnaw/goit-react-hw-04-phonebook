@@ -54,7 +54,7 @@ const  deleteContact = remove => {
       />}
       
       <RenderContactList
-        contactList={contacts.filter(contact => contact.name.toLowerCase().includes(filter))}
+        contactList={contacts.filter(contact => contact.name.toLowerCase().includes(filter.toLowerCase()))}
           onDeleteContact={deleteContact}
        />  
       <ToastContainer/>
