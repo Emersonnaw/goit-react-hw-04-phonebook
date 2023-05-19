@@ -9,7 +9,7 @@ width: 450px;
 
 
 export const Title = styled.h1`
-    margin-top: 80px;
+    // margin-top: 80px;
     margin-bottom: 40px;
     font-size:45px;
 `;

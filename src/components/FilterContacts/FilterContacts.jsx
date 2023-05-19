@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
+
 import PropTypes from 'prop-types';
 import {P,Input} from './FilterContacts.styled'
-export class FilterContacts extends Component {
+export const FilterContacts= ({filter,onChange}) => {
   
-    render() {
-    const { filter,onChange } = this.props;
+    
+   
     
     return (
       <>
@@ -17,7 +17,7 @@ export class FilterContacts extends Component {
         />
       </>
     );
-  }
+ 
 }
 
 FilterContacts.propTypes = {
